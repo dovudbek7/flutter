@@ -12,8 +12,15 @@ class Quote extends StatefulWidget {
 }
 
 class _QuoteState extends State<Quote> {
+  List<String> quotes = ['First', 'Second', 'Third'];
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Navbar', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.red[600],
+      ),
+      body: Column(children: quotes.map((quote) => Text(quote)).toList()),
+    );
   }
 }
