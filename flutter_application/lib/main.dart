@@ -25,17 +25,7 @@ class Home extends StatelessWidget {
         ),
         backgroundColor: Color.fromARGB(255, 142, 18, 18),
       ),
-      body: Center(
-        child: Text(
-          'Hello world',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: Colors.green[500],
-            fontFamily: 'losevkaCharon',
-          ),
-        ),
-      ),
+      body: Center(child: Image.asset('assets/image1.png')),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Text('data'),
         backgroundColor: Color.fromARGB(255, 181, 28, 28),
