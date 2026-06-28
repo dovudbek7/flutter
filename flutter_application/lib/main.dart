@@ -26,8 +26,18 @@ class Home extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 142, 18, 18),
       ),
 
-      body: Container(
-        child: Padding(padding: EdgeInsets.all(20),child: Text('data'),),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('Hello world'),
+          ElevatedButton(onPressed: () {}, child: Text('data')),
+          Container(
+            padding: EdgeInsets.all(30),
+            color: Colors.amber,
+            child: Text('Container'),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Text('data'),
