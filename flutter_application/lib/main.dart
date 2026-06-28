@@ -25,28 +25,9 @@ class Home extends StatelessWidget {
         ),
         backgroundColor: Color.fromARGB(255, 142, 18, 18),
       ),
-      // body: Center(child: Icon(Icons.airport_shuttle, color: Colors.lightBlue, size: 50,)),
-      // body: Center(
-      //   child: ElevatedButton(
-      //     onPressed: () {
-      //       print('Button clickend');
-      //     },
-      //     style: ElevatedButton.styleFrom(backgroundColor: Colors.lightBlue),
-      //     child: Text('Click me', style: TextStyle(color: Colors.white)),
-      //   ),
-      // ),
-      body: Center(
-        child: ElevatedButton.icon(
-          onPressed: () {
-            print('Clicked');
-          },
-          icon: Icon(Icons.mail),
-          label: Text('data'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.amber,
-            iconColor: Colors.white,
-          ),
-        ),
+
+      body: Container(
+        child: Padding(padding: EdgeInsets.all(20),child: Text('data'),),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Text('data'),
