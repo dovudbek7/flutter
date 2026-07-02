@@ -10,3 +10,14 @@ Buttonlar >
 └───────────────┴────────────────┘
 IconButton button => with only IconButton
 ElevatedButton.icon => button with icon and text
+
+
+
+
+
+
+
+
+Lists of Data:
+  List<String> quotes = ['First', 'Second', 'Third', "Fourth"];
+  body: Column(children: quotes.map((quote) => Text(quote)).toList()),
