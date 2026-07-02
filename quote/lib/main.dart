@@ -23,11 +23,6 @@ class _QuoteListState extends State<QuoteList> {
       author: 'Albert Einstein',
       text: 'Imagination is more important than knowledge.',
     ),
-    Quote(author: 'Steve Jobs', text: 'Stay hungry, stay foolish.'),
-    Quote(
-      author: 'Nelson Mandela',
-      text: 'It always seems impossible until it\'s done.',
-    ),
     Quote(
       author: 'Walt Disney',
       text:
@@ -43,7 +38,18 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.red[600],
       ),
       body: Column(
-        children: quotes.map((quote) => quoteCard(quote: quote)).toList(),
+        children: quotes
+            .map(
+              (quote) => quoteCard(
+                quote: quote,
+                delete: () {
+                  setState(() {
+                    quotes.remove(quote);
+                  });
+                },
+              ),
+            )
+            .toList(),
       ),
     );
   }
