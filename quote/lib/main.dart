@@ -12,6 +12,27 @@ class QuoteList extends StatefulWidget {
   State<QuoteList> createState() => _QuoteListState();
 }
 
+Widget quoteTemplate(quote) {
+  return Card(
+    margin: EdgeInsets.all(20),
+    child: Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Column(
+        children: [
+          Text(
+            quote.text,
+            style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+          ),
+          Text(
+            quote.author,
+            style: TextStyle(fontSize: 18, color: Colors.grey[700]),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
 class _QuoteListState extends State<QuoteList> {
   List<Quote> quotes = [
     Quote(
@@ -41,19 +62,7 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.red[600],
       ),
       body: Column(
-        children: quotes
-            .map(
-              (quote) => Container(
-                child: Column(
-                  children: [
-                    Text(quote.author),
-                    SizedBox(height: 10),
-                    SizedBox(width: 300, child: Text(quote.text)),
-                  ],
-                ),
-              ),
-            )
-            .toList(),
+        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
       ),
     );
   }
